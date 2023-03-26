@@ -4,11 +4,12 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
+    width: 100%;
 }
 
 .navbar {
     background: #1082c1;
-    height: 150px;
+    height: 110px;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -35,7 +36,7 @@
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     .navbar__container {
         display: flex;
         justify-content: space-between;
@@ -44,6 +45,13 @@
         width: 100%;
         max-width: 1300px;
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my-imagelogo {
+        width: 50%;
+        justify-items: center;
     }
 }
 
@@ -64,7 +72,7 @@
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    padding: 100px 0px 0px 100px;
+    padding: 100px 70px 0px 70px;
     column-gap: 100px;
 }
 
@@ -83,7 +91,7 @@
 }
 
 .main__content h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: #fff;
     background-size: 100%;
     font-weight: 500;
@@ -112,6 +120,7 @@
     position: relative;
     transition: all 0.35s;
     outline: none;
+    width: 30%;
 }
 
 .main__btn a {
@@ -149,32 +158,36 @@
         justify-self: center;
         width: 100%;
         margin: 0 auto;
-        height: 90vh;
+        height: auto;
+        padding: 20px 20px 0px 20px;
     }
 
     .main__content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-top: 2rem;
+        padding: 0px 20px 5px 20px;
     }
 
     .main__content h3 {
-        font-size: 3rem;
+        font-size: 1.5rem;
+        padding: 0px 20px 5px 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .main__content h1 {
-        font-size: 2rem;
-        margin-top: 3rem;
+        font-size: 1.5rem;
+        margin-top: 1rem;
     }
 
     .main__content h3 {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
     .main__btn {
-        padding: 12px 36px;
+        padding: 10px 20px;
         margin: 2.5rem 0;
+        width: auto;
     }
 }
 
@@ -208,7 +221,7 @@
 .services__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    column-gap: 35px;
     max-width: fit-content;
     text-align: start;
     column-fill: auto;
@@ -363,33 +376,65 @@ button[type=submit]:hover {
     transition: 0.3s ease-out;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .services {
-        height: 1400px;
+        padding: 10px 20px 40px 20px;
+        width: 100%;
+        font-size: small;
     }
 
     .services h1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .services__card {
-        width: 300px;
-    } 
-
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.5;
+    }
     
 }
+
+
+@media screen and (max-width: 768px) {
+    .services__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        max-width: fit-content;
+        text-align: start;
+        column-fill: auto;
+        font-size: 10px;
+        padding: 0 20px 20px 20px;
+        column-gap: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    p#form_text {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .input-group {
+        font-size: 10px;
+    }
+
+    button[type=submit] {
+        font-size: 12px;
+        word-spacing: 0px;
+        padding: 0px;
+    }
+}
+
 
 /* Footer CSS */
 
 .footer__container {
     background-color: #1082c1;
-    padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 20px 100px 20px 100px;
-    justify-content: center;
-    align-items: center;
-    text-align: start;
+    padding: 50px 0px 20px 100px;
 }
 
 .footerlink_items h2 {
@@ -409,6 +454,9 @@ button[type=submit]:hover {
     text-decoration: none;
 }
 
+.socail_media {
+    font-size: 12px;
+}
 
 .footerlink_items a:hover {
     color: #141414;
@@ -418,9 +466,19 @@ button[type=submit]:hover {
 /* Social Icons */
 
 .social__icon--link {
-    color: #ffffff;
-    font-size: 24px;
+    color:#fff;
+    font-size: 20px;
+    display: inline-block;
+    width: fit-content;
+    padding: 5px;
 }
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 10px;
+  }
+
 
 .social__icon--link:hover {
     color: #f30707;
@@ -433,8 +491,9 @@ button[type=submit]:hover {
     font-weight: 200;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
-    float: right;
-    font-style: italic;
+    text-align: right;
+    padding-right: 100px;
+  
 
 }
 
@@ -445,14 +504,30 @@ button[type=submit]:hover {
 
 @media screen and (max-width: 768px) {
     .footer__container {
-        padding-top: 2rem;
+        padding: 40px 20px 30px 20px;
+        width: 100%;
+    }
+
+    .social__icon--link {
+        font-size: 15px;
+        display: inline-block;
+        width: fit-content;
+        padding: 5px;
+    }
+
+    .website__rights {
+        font-size: 10px;
+        text-align: start;
+        padding-right: 0px;
     }
 
 @media screen and (max-width: 480px) {
    .footerlink_items {
         margin: 0;
-        padding: 10px;
+        padding:  0px;
         width: 100%;
+        display: grid;
       }        
     }
 }
+
