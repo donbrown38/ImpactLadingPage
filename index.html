@@ -9,18 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     
 </head>
 <body>
     
       <!--Navbar section-->
-      <nav class="navbar">
-        <div class="navbar__container">
-            <a href="/" id="navbar__logo">
-                <img src="images/logo.jpg" alt="IMPACT" class="my-imagelogo">
+<nav>
+      <div class="navbar" id="myNavbar">
+        <!-- <div class="navbar__container"> -->
+            <a class="navbar__logo">
+                <img src="images/logo.jpg" alt="IMPACT" class="my-imagelogo">    
             </a>
+            <a href="#" class="active_nav">Talk with an advisor</a>
         </div>
-    </nav>
+</nav>
 
     <!--Hero section-->
     <div class="main">
@@ -58,20 +63,20 @@
                 <p><b>Fill out the form on this page to get your free copy and start growing your blog right now!</b></p>
         </div>
         <div class=" form_container">
-            <form id="myForm" action="submit.php" method="POST" autocomplete="off">
+            <form id="myForm">
                 <div class="wrapper">
                 <fieldset>
                     <legend>GET MY COPY NOW!</legend>
                     
                     <div class="row">
                         <div id="my-form1"  class="input-group">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" required>
+                            <label for="first_name">First Name</label>
+                            <input type="text" id="first_name" name="last_name" required>
                         </div>       
                        
                         <div class="input-group">
-                            <label for="lname">Last name</label>
-                            <input type="text" id="lname" name="lname" required>
+                            <label for="last_name">Last name</label>
+                            <input type="text" id="last_name" name="last_name" required>
                         </div>
                     </div>
                    
@@ -85,12 +90,12 @@
                     
                     <div class="row">
                         <div class="input-group">
-                            <label for="cname">Company Name</label>
-                            <input type="text" id="cname" name="cname">
+                            <label for="company_name">Company Name</label>
+                            <input type="text" id="company_name" name="ccompany_name">
                         </div>
                         <div class="input-group">
                             <label for="website">Website</label>
-                            <input type="url" id="website" name="website">
+                            <input type="text" id="website" name="website">
                         </div>
                     </div>
                    
@@ -112,7 +117,7 @@
                     <br>
 
                     <div class="button">
-                        <button type="submit">GENERATE MORE CONVERSIONS!</button>
+                        <button type="submit" value="submit">GENERATE MORE CONVERSIONS!</button>
                     </div>
                 </fieldset>
                 </div>
@@ -121,46 +126,70 @@
     </div>
 </div>
 
-<!-- success alert box -->
-
-<div id="successMessage"></div>
 
 <!--Footer Section-->
 
 <div class="footer__container">
-            <div class="footerlink_items">
-                <h2>About Us</h2>
-                <a href="/">How it works</a>
-                <a href="/">Testimonials</a>
-                <a href="/">Terms of Services</a>
-            </div>
-
-            <div class="social__media">
-                <div class="social__media--wrap">
-                    <p class="website__rights"> IMPACT 2023. All rights reserved</p>
-                    <div class="social__icons">
-                        <a href="/" class="social__icon--link" target="_blank">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="/" class="social__icon--link" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="/" class="social__icon--link" target="_blank">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="/" class="social__icon--link" target="_blank">
-                            <i class="fab fa-LinkedIn"></i>
-                        </a>
-                        <a href="/" class="social__icon--link" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-        </div>
-
+    <div id="footer_logo">
+        <img src="images/logo.jpg" alt="footer_logo" class="footer_logo">
     </div>
+    <div id="footer_txt">
+        <p class="website__rights"> IMPACT 2023. All rights reserved.</p>
+    </div>
+    <div id="menu_link">
+        <a href="#" >About Us</a>
+        <a href="#">How it works</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Terms of Services</a>
+    </div>
+    <div class="social__media">
+        <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="/" class="social__icon--link" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+   </div>      
+</div>
+
+<!-- Add HTML for the alert box and form -->
+<div class="alert-box">
+<span class="close-btn"><i class="fas fa-times"></i></span>
+    <div class="column_box">
+        <div class="alert_box_container">
+            <img src="images/training.jpg" alt="Business Consulting Training" id="training_img">
+        </div>
+        <div class="alert_box_container"> 
+            <h1> Get the ultimate tips to grow your business</h1><br>
+            <p id="sub_message"> Subscribe for 7 free & practical tips that are easy to implement. No strings attached. </p>
+        <form class="email-form" onsubmit="return validateEmail()" novalidate>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <span class="error-message">Please enter a valid company email address</span>
+            <button class="submit"> Subscribe </button>
+        </form>
+        </div>
+    </div>
+</div>
+
+<!---Add html submit form button-->
+<div class="submit_block" Id="successMessage">
+    <p>Thank you for submitting the form, <br> a representative will get in touch with you!</p>
+    <div class="icon">
+        <i class="fa-sharp fa-solid fa-circle-check"></i>
+    </div>
+    <div class="successMessage_btn">
+        <span class="close-btn"><i class="fas fa-times"></i></span>    
+    </div>
+</div>
+
 <script src="myscripts.js"></script>
-<script src="form.js"></script>
+<script src="myformjav.js"></script>
 <script src="https://kit.fontawesome.com/911b7ab861.js" crossorigin="anonymous"></script>
 </body>
 
